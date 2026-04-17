@@ -1,0 +1,45 @@
+{
+  "name": "siteprobe",
+  "version": "1.0.0",
+  "description": "Fast, concurrent endpoint health checker with rich terminal output. Checks HTTP status, response time, TLS certificate expiry, and DNS resolution.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "siteprobe": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "health-check",
+    "uptime",
+    "monitor",
+    "endpoint",
+    "tls",
+    "dns",
+    "cli",
+    "devops",
+    "sysadmin"
+  ],
+  "author": "William Zujkowski",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "files": [
+    "dist/"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  }
+}
